@@ -20,7 +20,6 @@ public class Client {
 
     public static void main(String[] args) {
         String message = "Hello";
-        
         try {
             //create client-server connection
             System.out.println("Trying connection!");
