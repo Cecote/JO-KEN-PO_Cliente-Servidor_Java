@@ -96,6 +96,7 @@ public class Servidor extends Thread {
 
             while (!"Sair".equalsIgnoreCase(msg) && msg != null) {
 
+                
                 if (placarP1 == 3 || placarP2 == 3) {
                     semaforoJogo.acquire();
                     if (placarP1 == 3) {
@@ -104,7 +105,7 @@ public class Servidor extends Thread {
                         round = 1;
                         sendToPlayer(player1Buffer, "Você ganhou a partida!\r\n");
                         sendToPlayer(player2Buffer, "Você perdeu a partida!\r\n");
-                    } else {
+                    } else if (placarP2 == 3) {
                         placarP1 = 0;
                         placarP2 = 0;
                         round = 1;
